@@ -1,0 +1,51 @@
+<%-include('./partials/LinksA')-%>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+    <%-include('./partials/teacherNavbar')-%>
+<div class="container">
+    <br/>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form action="/teacher/<%=token%>/search" class="card card-sm" method="POST">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" name="search" type="search" placeholder="Search by Name">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">FullName</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Mobile</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <%data.forEach(function(item,index){%>
+                          <tr>
+                            <th scope="row"><%=index+1%></th>
+                            <td><%=data[index].fullname%></td>
+                            <td><%=data[index].email%></td>
+                            <td><%=data[index].moblie%>  <a type="button" href="/teacher/<%=token%>/details/<%=data[index]._id%>" class="btn btn-outline-info">Details</a></td>
+                          </tr>
+                          <%});%>
+                        </tbody>
+                      </table>
+</div>
+<%-include('./partials/LinksB')-%>
+<%-include('./partials/footer')-%>

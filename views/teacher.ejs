@@ -1,0 +1,83 @@
+<%-include('./partials/LinksA')-%>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .left_div {
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+
+    }
+
+    .right_div img {
+        width: 100%;
+        height: 100vh;
+        /* border: 2px solid red; */
+    }
+</style>
+
+<body>
+
+    <%-include('./partials/navbar')-%>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6  left_div justify-content-center ">
+                <h1 style="text-align: center; font-weight:bolder;" class="mb-3">Teacher Registration</h1>
+
+                <form action="/register/teacher" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">First name</label>
+                        <input type="text" name="fname" class="form-control" id="text" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Last name</label>
+                        <input type="text" name="lname" class="form-control" id="text" placeholder="Enter Last Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Mobile">Mobile</label>
+                        <input type="text" name="mobile" class="form-control" id="text" placeholder="Enter Mobile Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Confirm Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Confirm Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block mt-4">SignUp</button>
+                </form>
+
+            </div>
+
+            <div class="col-md-6  right_div">
+
+                <img src="/images/register.svg" alt="loginImage">
+
+            </div>
+
+        </div>
+    </div>
+    <%-include('./partials/LinksB')-%>
+    <%-include('./partials/footer')-%>

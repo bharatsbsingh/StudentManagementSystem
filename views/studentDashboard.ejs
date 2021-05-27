@@ -1,0 +1,104 @@
+<%-include('./partials/LinksA')-%>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .profile_area img {
+        border-radius: 50%;
+        width: 30%;
+    }
+
+    .card {
+        align-items: center;
+    }
+</style>
+
+<body>
+    <%-include('./partials/studentNavbar')-%>
+    <div class="container">
+        <h1 style="text-align: center;">Student Dashboard</h1>
+        <div class="row mt-5 r">
+
+            <div class="col-md-6 left_area">
+                <div class="dashboard-body">
+
+                    <div class="card" style="width: 18rem;">
+                        <i class="far fa-address-card fa-10x"></i>
+                        <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Details</h5>
+                            <a href="/student/<%=token%>/profile" class="btn btn-primary btn-block">more</a>
+                        </div>
+
+                        <div class="card ele2" style="width: 18rem;">
+                            <i class="far fa-address-book fa-10x"></i>
+                            <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+                            <div class="card-body">
+                                <h5 class="card-title">Assignments and Notes</h5>
+                                <a href="/student/<%=token%>/assingment" class="btn btn-primary btn-block">More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 
+            <div class="col-md-4 middle_area">
+                <div class="dashboard-body">
+
+                    <div class="card ele1" style="width: 18rem;">
+                        <i class="fas fa-calendar-week fa-10x"></i>
+                        <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+            <!-- <div class="card-body">
+                            <h5 class="card-title"> See Attendence</h5>
+                            <a href="studentAttendence.html" class="btn btn-primary btn-block">more</a>
+                        </div>
+
+                        <div class="card ele2" style="width: 18rem;">
+                            <i class="fas fa-calculator fa-10x"></i>
+                            <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+            <!-- <div class="card-body">
+                                <h5 class="card-title">Marks</h5>
+                                <a href="studentMarks.html" class="btn btn-primary btn-block">More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>  -->
+
+            <div class="col-md-6 right_area">
+                <div class="dashboard-body">
+
+                    <div class="card ele1" style="width: 18rem;">
+                        <i class="fas fa-file-alt fa-10x"></i>
+                        <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Notice And Updates</h5>
+                            <a href="/student/<%=token%>/updates" class="btn btn-primary btn-block">more</a>
+                        </div>
+
+                        <div class="card ele1" style="width: 18rem;">
+                            <i class="far fa-money-bill-alt fa-10x"></i>
+                            <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+                            <div class="card-body">
+                                <h5 class="card-title">Fees</h5>
+                                <a href="/student/<%=token%>/fee" class="btn btn-primary btn-block">more</a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <%-include('./partials/LinksB')-%>
+        <%-include('./partials/footer')-%>

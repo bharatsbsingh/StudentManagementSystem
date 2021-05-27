@@ -1,0 +1,108 @@
+<%-include('./partials/LinksA')-%>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .heading {
+        color: #3ca5b8;
+        font-weight: bold;
+        /* border-bottom: 2px double #367783; */
+    }
+
+    .myContainer {
+        box-shadow: 1.2rem 1.5rem 5px #a9dde6;
+        /* border: 2px dotted blue; */
+    }
+
+    .middle-col {
+        margin-top: 1rem;
+        /* border: 2px solid red; */
+    }
+
+    .details {
+        margin: 2px solid red;
+    }
+
+    .profile img {
+        width: 100%;
+    }
+
+    .profile_right {
+        display: flex;
+        justify-content: end;
+        align-items: flex-start;
+    }
+</style>
+
+<body>
+    <%-include('./partials/teacherNavbar')-%>
+
+    <div class="container">
+        <h2 style="text-align: center;" class="mt-2 heading">Personal Info</h2>
+        <div class="row myContainer mt-5">
+            <div class=" col-md-4 profile">
+                <img src="/images/profilePic.webp" alt="prodile-pic">
+                <button class="btn btn-info btn-block mb-5">Change Pic</button>
+                <!-- <h6 style="display: inline;">Name:</h6>
+                <p style="display: inline;">BHARAT </p> -->
+
+
+            </div>
+
+            <div class=" col-md-6 middle">
+                <div class="middle-col">
+                    <h5 style="display: inline;">Name:</h5>
+                    <p style="display: inline;"><%=data.fullname%></p>
+                    <br>
+                </div>
+                <div class="middle-col">
+                    <h5 style="display: inline;" class="mt-2">Specialisation:</h5>
+                    <p style=" display: inline;">Computer Networks</p>
+                    <br>
+                </div>
+                <div class="middle-col">
+                    <h5 style="display: inline;" class="mt-2">Date Of Birth:</h5>
+                    <p style=" display: inline;">1/1/2000</p>
+                </div>
+                <div class="middle-col">
+                    <h5 style="display: inline;">Primary Address:</h5>
+                    <p style="display: inline;">Bhimtal Nainital</p>
+                    <br>
+                </div>
+
+                <div class="middle-col">
+                    <h5 style="display: inline;" class="middle_col">Current Address:</h5>
+                    <p style="display: inline;">Bhimtal Nainital</p>
+                    <br>
+                </div>
+                <div class="middle-col">
+                    <h5 style="display: inline;" class="middle_col">Email:</h5>
+                    <p style="display: inline;"><%=data.email%></p>
+                    <br>
+                </div>
+                <div class="middle-col">
+                    <h5 style="display: inline;" class="middle_col">Mobile Number:</h5>
+                    <p style="display: inline;"><%=data.moblie%></p>
+                    <br>
+                </div>
+                <div class="middle-col">
+                    <h5 style="display: inline;" class="middle_col">Password:</h5>
+                    <p style="display: inline;">Bhimtal Nainital</p>
+                    <small><a href="">change password</a></small>
+                    <br>
+                </div>
+
+            </div>
+            <!-- <div class=" col-md-1 profile_right mt-1 mb-5">
+                <button class=" btn btn-info">Edit Profile</button>
+            </div> -->
+        </div>
+    </div>
+    <%-include('./partials/LinksB')-%>
+    <%-include('./partials/footer')-%>

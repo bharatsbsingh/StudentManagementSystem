@@ -1,0 +1,62 @@
+<%-include('./partials/head')-%>
+<%-include('./partials/bootstrap4')-%>
+</head>
+<body>
+    <%-include('./partials/navbar')-%>
+<section>
+    <div class="container">
+      <div class="row justify-content-center">   
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+            <form action="/admin/regadmin" method="post">
+          <div class="row">
+            <div class="col text-center">
+              <h1>Register</h1>
+              <p class="text-h3">This Registration is Only for Admin. </p>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="text" class="form-control" name="fname" placeholder="First Name">
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="text" class="form-control" name="lname" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="number" class="form-control" name="mobile" placeholder="Phone" minlength="10" maxlength="10">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="col">
+              <input type="password" class="form-control" placeholder="Confirm Password">
+            </div>
+          </div>
+          <div class="row justify-content-start mt-4">
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input">
+                  I Read and Accept <%-include('./partials/termsConditions')-%></a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%-include('./partials/footer')-%>

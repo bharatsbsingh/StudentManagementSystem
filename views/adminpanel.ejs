@@ -1,0 +1,46 @@
+    <%-include('./partials/head')-%>
+    <%-include('./partials/bootstrap4')-%>
+    <link rel="stylesheet" href="../public/css/panel.css">
+    
+</head>
+<body>
+    <%-include('./partials/navbar')-%>
+    <div class="container">
+        <div class="row">
+            <div class="column mt-5">
+            <div class="card border-danger mb-5" style="max-width: 18rem;">
+                <div class="card-header">Add Admin</div>
+                <div class="card-body text-danger">
+                <h5 class="card-title">Here add new admins</h5>
+                <a href="/admin/regadmin" type="button" class="btn btn-outline-danger">Register</a>
+                </div>
+            </div>
+            <div class="card border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Check Users</div>
+                <div class="card-body text-info">
+                <h5 class="card-title">Check the numbers of users</h5>
+                <a href="/admin/list" type="button" class="btn btn-outline-info">Users</a>
+                </div>
+            </div>
+          </div>
+          <div class="column ml-5 mt-5">
+            <div class="card border-primary mb-5" style="max-width: 18rem;">
+                <div class="card-header">Search</div>
+                <div class="card-body text-primary">
+                <h5 class="card-title">Search here..!!</h5>
+                <a href="/admin/search" type="button" class="btn btn-outline-primary">Search</a>
+                </div>
+            </div>
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Website</div>
+                <div class="card-body text-warning">
+                <h5 class="card-title">College website</h5>
+                <a href="https://www.gehu.ac.in/" type="button" class="btn btn-outline-warning">Website</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    
+<%-include('./partials/footer')-%>

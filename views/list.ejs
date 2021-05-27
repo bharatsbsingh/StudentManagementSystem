@@ -1,0 +1,41 @@
+<%-include('./partials/head')-%>
+<%-include('./partials/bootstrap4')-%>
+<link rel="stylesheet" href="/css/btnNP.css">
+<link rel="stylesheet" href="/css/delete.css">
+</head>
+<body>
+    <%-include('./partials/navbar')-%>
+    <%-include('./partials/verticalnav')-%>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Row</th>
+               <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+            </tr>
+        </thead> 
+    <%if(data!==null){data.forEach(function(data,index){  %>
+          <tbody>
+            <tr>
+                <td><%=++index%></td>
+                <td><%=data.fullname%></td>
+                <td><%=data.email%></td>
+                <td><%=data.moblie%> <a href="/admin/edit/<%=data._id%>">Edit</a><%-include('./partials/delete',{token:data._id})-%></td>
+            </tr>            
+        </tbody>
+        <%})}%>
+    </table>
+    <%if(para!==null){%>
+        <%var s = JSON.stringify(page);
+        var d = Number(s);
+        d=d+1;%>
+    <div class="container d-flex justify-content-around ">
+        <a type="button" href="/admin/list/<%=para %>/<%=--page%>" class="btn btn-outline-secondary ">Previous</a>
+        <%if(data.length<10){%>
+            <%}else{%>
+        <a type="button" href="/admin/list/<%=para%>/<%=d%>"  class="btn btn-outline-secondary ">Next</a>
+            <%}%>
+    </div>
+    <%}%>
+<%-include('./partials/footer')-%>
