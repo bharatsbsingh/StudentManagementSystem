@@ -1,5 +1,4 @@
 # StudentManagementSystem
-Yet  not completed
 This is A student management project its is still not completed yet need to work on it.
 Admin Pannel--------------------------------------------------------------------------->>>>>>>![admin  Dashboard](https://user-images.githubusercontent.com/55123293/135561626-f730178c-73c4-4158-99db-b2e0cbef6e75.png)
 ![admin Registration](https://user-images.githubusercontent.com/55123293/135561630-1a219bf0-470b-466b-9d53-35ceda6b27fb.png)
